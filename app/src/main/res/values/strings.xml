@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">CardScore</string>
+    <string name="ready_next_match">Pronto para a próxima partida?</string>
+    <string name="choose_the_game">Escolha um jogo</string>
+    <string name="icon_game_truco">icone do jogo truco</string>
+    <string name="truco">Truco</string>
+    <string name="points_format">%s pontos clássicos</string>
+    <string name="buraco">Buraco</string>
+    <string name="canastra">Canastra</string>
+    <string name="icon_game_custom">icone_do_jogo_personalizado</string>
+    <string name="custom">Personalizado</string>
+    <string name="define_your_rules">Defina suas regras</string>
+    <string name="new_game">+ Novo Jogo</string>
+    <string name="history">Histórico</string>
+    <string name="statistics">Estatísticas</string>
+    <string name="icon_game_buraco">icone do jogo de buraco</string>
+    <string name="icon_canastra_game">icone do jogo de canastra</string>
+    <string name="icon_poker_game">icone do jogo de poker</string>
+    <string name="poker">Poker</string>
+    <string name="chips_and_bets">Fichas e apostas</string>
+</resources>
