@@ -1,6 +1,7 @@
 package com.example.cardscore
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,4 +18,12 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
+    fun estatisticas(view: View) {}
+    fun historico(view: View) {}
+    fun novo_jogo(view: View) {}
+    fun truco(view: View) {}
+    fun buraco(view: View) {}
+    fun poker(view: View) {}
+    fun personalizado(view: View) {}
 }

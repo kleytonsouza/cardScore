@@ -79,17 +79,21 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <androidx.cardview.widget.CardView
+            android:clickable="true"
+            android:id="@+id/cardViewTruco"
             android:layout_width="160dp"
             android:layout_height="116dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
             android:background="@color/white"
             android:backgroundTint="#4B03A9F4"
+            android:focusable="true"
             app:cardCornerRadius="16dp"
             app:cardElevation="0dp"
             app:contentPaddingBottom="8dp"
             app:contentPaddingLeft="8dp"
             app:contentPaddingRight="8dp"
+            android:onClick="truco"
             app:contentPaddingTop="4dp">
 
             <LinearLayout
@@ -121,24 +125,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="12 pontos clássicos"
+                    android:text="@string/doze_pontos_classicos"
                     android:textStyle="bold" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:clickable="true"
+            android:id="@+id/cardViewBuraco"
             android:layout_width="160dp"
             android:layout_height="116dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
             android:background="@color/white"
             android:backgroundTint="#4B03A9F4"
+            android:focusable="true"
             app:cardCornerRadius="16dp"
             app:cardElevation="0dp"
             app:contentPaddingBottom="8dp"
             app:contentPaddingLeft="8dp"
             app:contentPaddingRight="8dp"
+            android:onClick="buraco"
             app:contentPaddingTop="4dp">
 
             <LinearLayout
@@ -170,7 +178,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Partida em duplas"
+                    android:text="@string/partida_em_duplas"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -187,17 +195,21 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <androidx.cardview.widget.CardView
+            android:clickable="true"
+            android:id="@+id/cardViewPoker"
             android:layout_width="160dp"
             android:layout_height="116dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
             android:background="@color/white"
             android:backgroundTint="#4B03A9F4"
+            android:focusable="true"
             app:cardCornerRadius="16dp"
             app:cardElevation="0dp"
             app:contentPaddingBottom="8dp"
             app:contentPaddingLeft="8dp"
             app:contentPaddingRight="8dp"
+            android:onClick="poker"
             app:contentPaddingTop="4dp">
 
             <LinearLayout
@@ -215,7 +227,7 @@
                     app:srcCompat="@drawable/poker_icon" />
 
                 <TextView
-                    android:id="@+id/canastra"
+                    android:id="@+id/poker"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -225,7 +237,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/pontos_canastra"
+                    android:id="@+id/pontos_poker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -236,17 +248,21 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:clickable="true"
+            android:id="@+id/cardViewPersonalizado"
             android:layout_width="160dp"
             android:layout_height="116dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
             android:background="@color/white"
             android:backgroundTint="#4B03A9F4"
+            android:focusable="true"
             app:cardCornerRadius="16dp"
             app:cardElevation="0dp"
             app:contentPaddingBottom="8dp"
             app:contentPaddingLeft="8dp"
             app:contentPaddingRight="8dp"
+            android:onClick="personalizado"
             app:contentPaddingTop="4dp">
 
             <LinearLayout
@@ -296,10 +312,11 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonNovoJogo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:onClick="novo_jogo"
             android:text="@string/new_game" />
     </LinearLayout>
 
@@ -315,19 +332,21 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonHistorico"
             style="?android:attr/absListViewStyle"
             android:layout_width="155dp"
-            android:layout_height="47dp"
+            android:layout_height="48dp"
             android:layout_marginEnd="8dp"
+            android:onClick="historico"
             android:text="@string/history" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/buttonEstatisticas"
             style="?android:attr/absListViewStyle"
             android:layout_width="155dp"
-            android:layout_height="47dp"
+            android:layout_height="48dp"
             android:layout_marginStart="8dp"
+            android:onClick="estatisticas"
             android:text="@string/statistics" />
     </LinearLayout>
 

@@ -18,4 +18,15 @@
     <string name="icon_poker_game">icone do jogo de poker</string>
     <string name="poker">Poker</string>
     <string name="chips_and_bets">Fichas e apostas</string>
+    <string name="doze_pontos_classicos">12 pontos clássicos</string>
+    <string name="partida_em_duplas">Partida em duplas</string>
+    <string name="icone_dos_jogadores">Icone dos jogadores</string>
+    <string name="identifique_os_participantes">Identifique os participantes</string>
+    <string name="jogadores">Jogadores</string>
+    <string name="equipe_jogador_1">Equipe / Jogador 1</string>
+    <string name="equipe_1">Equipe 1</string>
+    <string name="equipe_jogador_2">Equipe / Jogador 2</string>
+    <string name="equipe_2">Equipe 2</string>
+    <string name="nome_equipe_2">nome equipe 2</string>
+    <string name="nome_equipe_1">nome_equipe_1</string>
 </resources>
