@@ -10,7 +10,6 @@
     android:background="#F8F9FD"
     tools:context=".OutrosJogosActivity">
 
-    <!-- BLOCO 1: PONTUAÇÃO MÁXIMA -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,7 +29,6 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <!-- BLOCO 2: PLACAR AZUL GRANDE -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,7 +44,6 @@
             android:paddingTop="20dp"
             android:paddingBottom="20dp">
 
-            <!-- Lado Esquerdo: Equipe 1 -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -71,13 +68,11 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <!-- Linha sutil separando as duas equipes -->
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:background="#20FFFFFF" />
 
-            <!-- Lado Direito: Equipe 2 -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -104,7 +99,6 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- BLOCO 3: CONTROLE DE PONTOS - EQUIPE 1 -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -120,7 +114,6 @@
         android:orientation="horizontal"
         android:gravity="center_vertical">
 
-        <!-- Campo de exibição/input cinza arredondado -->
         <EditText
             android:layout_width="0dp"
             android:layout_height="54dp"
@@ -137,7 +130,6 @@
             android:importantForAutofill="no"
             tools:ignore="TextFields" />
 
-        <!-- Botão roxo/azul de Adicionar -->
         <Button
             android:layout_width="0dp"
             android:layout_height="54dp"
@@ -150,7 +142,6 @@
             app:cornerRadius="24dp" />
     </LinearLayout>
 
-    <!-- BLOCO 4: CONTROLE DE PONTOS - EQUIPE 2 -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -194,14 +185,12 @@
             app:cornerRadius="24dp" />
     </LinearLayout>
 
-    <!-- BLOCO 5: TRÊS BOTÕES INFERIORES DE CONTROLE -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:orientation="horizontal">
 
-        <!-- Botão Voltar (Branco) -->
         <Button
             android:layout_width="0dp"
             android:layout_height="54dp"
@@ -215,7 +204,6 @@
             app:strokeWidth="1dp"
             app:cornerRadius="24dp" />
 
-        <!-- Botão Reiniciar (Branco) -->
         <Button
             android:layout_width="0dp"
             android:layout_height="54dp"
@@ -229,7 +217,6 @@
             app:strokeWidth="1dp"
             app:cornerRadius="24dp" />
 
-        <!-- Botão Bandeira / Terminar (Vermelho) -->
         <Button
             android:layout_width="0dp"
             android:layout_height="54dp"
@@ -241,7 +228,6 @@
             app:cornerRadius="24dp" />
     </LinearLayout>
 
-    <!-- BLOCO 6: HISTÓRICO DE JOGADAS -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
