@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CardScore">
         <activity
+            android:name=".OutrosJogosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TrucoActivity"
+            android:exported="false" />
+        <activity
             android:name=".MarcadorPontosActivity"
             android:exported="false" />
         <activity

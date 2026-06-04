@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F8F9FD"
+    tools:context=".OutrosJogosActivity">
+
+    <!-- BLOCO 1: PONTUAÇÃO MÁXIMA -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="PONTUAÇÃO MÁXIMA"
+        android:textColor="#555555"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:text="1500 pts"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- BLOCO 2: PLACAR AZUL GRANDE -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#004694">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <!-- Lado Esquerdo: Equipe 1 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EQUIPE 1"
+                    android:textColor="#A0C4FF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="70sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Linha sutil separando as duas equipes -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#20FFFFFF" />
+
+            <!-- Lado Direito: Equipe 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EQUIPE 2"
+                    android:textColor="#A0C4FF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="70sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- BLOCO 3: CONTROLE DE PONTOS - EQUIPE 1 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Pontos para Equipe 1"
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Campo de exibição/input cinza arredondado -->
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="2"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/bg_bola_cinza"
+            android:backgroundTint="#EEF2F8"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#1D2A44"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="number"
+            android:importantForAutofill="no"
+            tools:ignore="TextFields" />
+
+        <!-- Botão roxo/azul de Adicionar -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1.2"
+            android:text="+ Adicionar"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:backgroundTint="#8194E3"
+            app:cornerRadius="24dp" />
+    </LinearLayout>
+
+    <!-- BLOCO 4: CONTROLE DE PONTOS - EQUIPE 2 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Pontos para Equipe 2"
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="2"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/bg_bola_cinza"
+            android:backgroundTint="#EEF2F8"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#1D2A44"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="number"
+            android:importantForAutofill="no"
+            tools:ignore="TextFields" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1.2"
+            android:text="+ Adicionar"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:backgroundTint="#8194E3"
+            app:cornerRadius="24dp" />
+    </LinearLayout>
+
+    <!-- BLOCO 5: TRÊS BOTÕES INFERIORES DE CONTROLE -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <!-- Botão Voltar (Branco) -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="12dp"
+            android:text="↩"
+            android:textSize="20sp"
+            android:textColor="#666666"
+            app:backgroundTint="#FFFFFF"
+            app:strokeColor="#E0E0E0"
+            app:strokeWidth="1dp"
+            app:cornerRadius="24dp" />
+
+        <!-- Botão Reiniciar (Branco) -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="12dp"
+            android:text="🔄"
+            android:textSize="18sp"
+            android:textColor="#666666"
+            app:backgroundTint="#FFFFFF"
+            app:strokeColor="#E0E0E0"
+            app:strokeWidth="1dp"
+            app:cornerRadius="24dp" />
+
+        <!-- Botão Bandeira / Terminar (Vermelho) -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1.2"
+            android:text="🏳"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#E51C23"
+            app:cornerRadius="24dp" />
+    </LinearLayout>
+
+    <!-- BLOCO 6: HISTÓRICO DE JOGADAS -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Histórico de jogadas"
+        android:textColor="#1D2A44"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Nenhuma jogada ainda."
+        android:textColor="#888888"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+</LinearLayout>
