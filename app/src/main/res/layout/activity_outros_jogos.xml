@@ -211,6 +211,7 @@
         <Button
             style="?android:attr/absListViewStyle"
             android:layout_width="0dp"
+            android:contentDescription="@string/reverter_ultima_pontuacao"
             android:onClick="reverterUltimaPontuacao"
             android:layout_height="54dp"
             android:layout_marginEnd="12dp"
@@ -235,6 +236,7 @@
             android:onClick="reiniciarPartida"
             android:layout_height="54dp"
             android:layout_marginEnd="12dp"
+            android:contentDescription="@string/reiniciar_a_partida"
             android:layout_weight="1"
             app:icon="@drawable/outline_restart_alt_24"
             app:iconTint="#666666"
@@ -254,6 +256,7 @@
             android:layout_width="0dp"
             android:layout_height="54dp"
             android:onClick="finalizarPartida"
+            android:contentDescription="@string/finalizar_a_partida"
             app:iconGravity="textStart"
             android:layout_weight="1.2"
             app:icon="@drawable/outline_flag_24"

@@ -5,13 +5,8 @@ import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.cardscore.databinding.ActivityMainBinding
 import com.example.cardscore.databinding.ActivityMarcadorPontosBinding
-import com.example.cardscore.databinding.ActivityTrucoBinding
 
 @SuppressLint("SourceLockedOrientationActivity")
 class MarcadorPontosActivity : AppCompatActivity() {

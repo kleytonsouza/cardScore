@@ -36,7 +36,6 @@
     <string name="adicionar_pontuacao_equipe_2">+ Adicionar</string>
     <string name="pontos_para_equipe_2">Pontos para Equipe 2</string>
     <string name="reiniciar_partida">reiniciar partida</string>
-    <string name="finalizar_partida">Finalizar partida</string>
     <string name="desfazer_marcacao">Desfazer ultima marcação</string>
     <string name="valor_inicial">0</string>
     <string name="pontuacao_inicial_equipe_1">0</string>
@@ -70,4 +69,7 @@
     <string name="add_pontos_para_equipe_1">+ pontos para %s</string>
     <string name="digite_a_pontuacao_maxima_do_jogo">digite a pontuação máxima do jogo</string>
     <string name="disponivel_versao_paga">No momento, esta funcionalidade está disponível apenas na versão paga.</string>
+    <string name="finalizar_a_partida">finalizar a partida</string>
+    <string name="reiniciar_a_partida">Reiniciar a partida</string>
+    <string name="reverter_ultima_pontuacao">Reverter última pontuação</string>
 </resources>
