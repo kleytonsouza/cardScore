@@ -61,9 +61,10 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/placar_nome_equipe_um"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/equipe_1"
+                    android:text=""
                     android:textColor="#A0C4FF"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -91,9 +92,10 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/placar_nome_equipe_dois"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/equipe_2"
+                    android:text=""
                     android:textColor="#A0C4FF"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -128,6 +130,7 @@
 
         <EditText
             android:layout_width="0dp"
+            android:id="@+id/pontos_equipe_um"
             android:hint="@string/quantidade_de_pontos_a_serem_marcados_para_a_equipe_1"
             android:labelFor="@+id/pontucao_corrente_equipe_1"
             android:layout_height="54dp"
@@ -173,6 +176,7 @@
         <EditText
             android:layout_width="0dp"
             android:hint="@string/quantidade_de_pontos_a_serem_marcados_para_a_equipe_2"
+            android:id="@+id/pontos_equipe_dois"
             android:layout_height="54dp"
             android:layout_marginEnd="12dp"
             android:layout_weight="2"
@@ -274,6 +278,7 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/historico_resultado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"

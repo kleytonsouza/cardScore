@@ -50,7 +50,7 @@
     <string name="nenhuma_jogada_ainda">Nenhuma jogada ainda.</string>
     <string name="add_3_equipe_2">+3</string>
     <string name="add_1_equipe_2">+1</string>
-    <string name="add_pontos_para_equipe_2">+ pontos para Equipe 2</string>
+    <string name="add_pontos_para_equipe_2">+ pontos para %s</string>
     <string name="add_12_equipe_1">+12</string>
     <string name="add_9_equipe_1">+9</string>
     <string name="add_6_equipe_1">+6</string>
@@ -67,7 +67,7 @@
     <string name="iniciar_partida">Iniciar Partida</string>
     <string name="pontua_o_maxima_maiuscula">PONTUAÇÃO MÁXIMA</string>
     <string name="doze_pts">12 pts</string>
-    <string name="add_pontos_para_equipe_1">+ pontos para Equipe 1</string>
+    <string name="add_pontos_para_equipe_1">+ pontos para %s</string>
     <string name="digite_a_pontuacao_maxima_do_jogo">digite a pontuação máxima do jogo</string>
     <string name="disponivel_versao_paga">No momento, esta funcionalidade está disponível apenas na versão paga.</string>
 </resources>
