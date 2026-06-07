@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CardScore">
         <activity
+            android:name=".PokerActivity"
+            android:exported="false" />
+        <activity
             android:name=".OutrosJogosActivity"
             android:exported="false" />
         <activity

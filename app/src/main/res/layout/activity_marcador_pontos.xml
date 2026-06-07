@@ -5,9 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="32dp"
+    android:background="#F5F6F8"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#F5F6F8"
     tools:context=".MarcadorPontosActivity">
 
     <androidx.cardview.widget.CardView
@@ -27,15 +28,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView2"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/bg_bola_roxa"
                     android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_bola_roxa"
                     android:contentDescription="@string/icone_dos_jogadores"
                     app:srcCompat="@drawable/outline_group_24" />
 
@@ -48,16 +49,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/jogadores"
-                        android:textSize="16sp"
                         android:textColor="#1A1A1A"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/identifique_os_participantes"
-                        android:textSize="14sp"
-                        android:textColor="#666666" />
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -68,22 +69,21 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/nome_equipe_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/equipe_jogador_1"
-                    android:textSize="14sp"
+                    android:hint="@string/equipe_jogador_1"
                     android:textColor="#444444"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <EditText
+                    android:id="@+id/nome_equipe_um"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:hint="@string/nome_equipe_1"
                     android:autofillHints="username"
+                    android:hint="@string/nome_equipe_1"
                     android:inputType="text"
-                    android:labelFor="@id/nome_equipe_1"
-                    android:text="@string/equipe_1" />
+                    android:labelFor="@id/nome_equipe_1" />
             </LinearLayout>
 
             <LinearLayout
@@ -93,22 +93,21 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/nome_equipe_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/equipe_jogador_2"
-                    android:textSize="14sp"
                     android:textColor="#444444"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <EditText
+                    android:id="@+id/nome_equipe_dois"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:autofillHints="username"
                     android:hint="@string/nome_equipe_2"
                     android:inputType="text"
-                    android:labelFor="@id/nome_equipe_2"
-                    android:text="@string/equipe_2" />
+                    android:labelFor="@id/nome_equipe_2" />
             </LinearLayout>
 
         </LinearLayout>
@@ -131,15 +130,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView3"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/bg_bola_laranja"
                     android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_bola_laranja"
                     android:contentDescription="@string/icone_dos_jogadores"
                     app:srcCompat="@drawable/outline_trophy_24" />
 
@@ -151,17 +150,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Regras da Partida"
-                        android:textSize="16sp"
+                        android:text="@string/regras_da_partida"
                         android:textColor="#1A1A1A"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tipo de jogo e pontuação"
-                        android:textSize="14sp"
-                        android:textColor="#666666" />
+                        android:text="@string/tipo_de_jogo_e_pontuacao"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -175,13 +174,16 @@
                     android:id="@+id/tipo_jogo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tipo do Jogo"
-                    android:textSize="14sp"
+                    android:text="@string/tipo_do_jogo"
                     android:textColor="#444444"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <EditText
+                    android:id="@+id/nome_jogo"
                     android:layout_width="match_parent"
+                    android:autofillHints="@string/tipo_do_jogo"
+                    android:hint="@string/nome_do_tipo_jogo"
                     android:layout_height="48dp"
                     android:inputType="text"
                     android:text="" />
@@ -194,18 +196,19 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/pontuacao_maxima"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pontuação Máxima"
-                    android:textSize="14sp"
+                    android:text="@string/pontua_o_maxima"
                     android:textColor="#444444"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <EditText
+                    android:id="@+id/pontuacao_maxima"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:autofillHints="username"
+                    android:hint="@string/digite_a_pontuacao_maxima_do_jogo"
                     android:inputType="number"
                     android:labelFor="@id/pontuacao_maxima"
                     android:text="" />
@@ -215,10 +218,10 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:layout_marginTop="16dp"
+        android:onClick="iniciarPartida"
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:text="Iniciar Partida"
-    />
+        android:layout_marginTop="16dp"
+        android:text="@string/iniciar_partida" />
 
 </LinearLayout>

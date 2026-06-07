@@ -5,44 +5,53 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="32dp"
     android:background="#F8F9FD"
+    android:orientation="vertical"
     tools:context=".OutrosJogosActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="PONTUAÇÃO MÁXIMA"
+        android:text="@string/pontuacao_maxima"
         android:textColor="#555555"
         android:textSize="12sp"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/pontuacao_maxima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tipo_jogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="4dp"
-        android:text="1500 pts"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="32sp"
         android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#004694"
         app:cardCornerRadius="32dp"
-        app:cardElevation="4dp"
-        app:cardBackgroundColor="#004694">
+        app:cardElevation="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp">
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -54,22 +63,23 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EQUIPE 1"
+                    android:text="@string/equipe_1"
                     android:textColor="#A0C4FF"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/pontuacao_equipe_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0"
+                    android:text="@string/placar_inicial_equipe_1"
                     android:textColor="#FFFFFF"
                     android:textSize="70sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
             <View
-                android:layout_width="1dp"
+                android:layout_width="2dp"
                 android:layout_height="match_parent"
                 android:background="#20FFFFFF" />
 
@@ -83,15 +93,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EQUIPE 2"
+                    android:text="@string/equipe_2"
                     android:textColor="#A0C4FF"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/pontuacao_equipe_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0"
+                    android:text="@string/placar_inicial_equipe_2"
                     android:textColor="#FFFFFF"
                     android:textSize="70sp"
                     android:textStyle="bold" />
@@ -100,10 +111,11 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
+        android:id="@+id/nome_equipe_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Pontos para Equipe 1"
+
         android:textColor="#666666"
         android:textSize="14sp" />
 
@@ -111,42 +123,43 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <EditText
             android:layout_width="0dp"
+            android:hint="@string/quantidade_de_pontos_a_serem_marcados_para_a_equipe_1"
+            android:labelFor="@+id/pontucao_corrente_equipe_1"
             android:layout_height="54dp"
-            android:layout_weight="2"
             android:layout_marginEnd="12dp"
-            android:background="@drawable/bg_bola_cinza"
-            android:backgroundTint="#EEF2F8"
+            android:layout_weight="2"
+            android:background="@drawable/bg_fundo_cinza"
             android:gravity="center"
-            android:text="0"
+            android:importantForAutofill="no"
+            android:inputType="number"
             android:textColor="#1D2A44"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:inputType="number"
-            android:importantForAutofill="no"
             tools:ignore="TextFields" />
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="16dp"
+            android:onClick="adicionarPontuacaoEquipeUm"
             android:layout_height="54dp"
             android:layout_weight="1.2"
-            android:text="+ Adicionar"
-            android:textSize="14sp"
+            android:text="@string/adicionar_pontuacao_equipe_1"
             android:textColor="#FFFFFF"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:backgroundTint="#8194E3"
             app:cornerRadius="24dp" />
     </LinearLayout>
 
     <TextView
+        android:id="@+id/nome_equipe_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Pontos para Equipe 2"
         android:textColor="#666666"
         android:textSize="14sp" />
 
@@ -154,32 +167,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <EditText
             android:layout_width="0dp"
+            android:hint="@string/quantidade_de_pontos_a_serem_marcados_para_a_equipe_2"
             android:layout_height="54dp"
-            android:layout_weight="2"
             android:layout_marginEnd="12dp"
-            android:background="@drawable/bg_bola_cinza"
-            android:backgroundTint="#EEF2F8"
+            android:layout_weight="2"
+            android:background="@drawable/bg_fundo_cinza"
             android:gravity="center"
-            android:text="0"
+            android:importantForAutofill="no"
+            android:inputType="number"
             android:textColor="#1D2A44"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:inputType="number"
-            android:importantForAutofill="no"
             tools:ignore="TextFields" />
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="16dp"
+            android:onClick="adicionarPontuacaoEquipeDois"
             android:layout_height="54dp"
             android:layout_weight="1.2"
-            android:text="+ Adicionar"
-            android:textSize="14sp"
+            android:text="@string/adicionar_pontuacao_equipe_2"
             android:textColor="#FFFFFF"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:backgroundTint="#8194E3"
             app:cornerRadius="24dp" />
@@ -192,56 +205,79 @@
         android:orientation="horizontal">
 
         <Button
+            style="?android:attr/absListViewStyle"
             android:layout_width="0dp"
+            android:onClick="reverterUltimaPontuacao"
             android:layout_height="54dp"
-            android:layout_weight="1"
             android:layout_marginEnd="12dp"
-            android:text="↩"
+            android:backgroundTint="#FFF9C4"
+            android:layout_weight="1"
+            app:icon="@drawable/outline_keyboard_return_24"
+            app:iconTint="#666666"
+            app:iconGravity="textStart"
+            android:textColor="#666666"
             android:textSize="20sp"
-            android:textColor="#666666"
             app:backgroundTint="#FFFFFF"
+            app:cornerRadius="24dp"
             app:strokeColor="#E0E0E0"
-            app:strokeWidth="1dp"
-            app:cornerRadius="24dp" />
+            app:iconPadding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            />
 
         <Button
+            style="?android:attr/absListViewStyle"
             android:layout_width="0dp"
+            android:onClick="reiniciarPartida"
             android:layout_height="54dp"
-            android:layout_weight="1"
             android:layout_marginEnd="12dp"
-            android:text="🔄"
-            android:textSize="18sp"
+            android:layout_weight="1"
+            app:icon="@drawable/outline_restart_alt_24"
+            app:iconTint="#666666"
+            app:iconGravity="textStart"
+            android:backgroundTint="#FFE0B2"
             android:textColor="#666666"
+            android:textSize="18sp"
             app:backgroundTint="#FFFFFF"
+            app:cornerRadius="24dp"
             app:strokeColor="#E0E0E0"
-            app:strokeWidth="1dp"
-            app:cornerRadius="24dp" />
+            app:iconPadding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp" />
 
         <Button
+            style="?android:attr/absListViewStyle"
             android:layout_width="0dp"
             android:layout_height="54dp"
+            android:onClick="finalizarPartida"
+            app:iconGravity="textStart"
             android:layout_weight="1.2"
-            android:text="🏳"
-            android:textSize="18sp"
+            app:icon="@drawable/outline_flag_24"
             android:textColor="#FFFFFF"
+            android:textSize="18sp"
             app:backgroundTint="#E51C23"
-            app:cornerRadius="24dp" />
+            app:iconPadding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="24dp"
+            app:strokeColor="#E0E0E0"
+            app:strokeWidth="1dp"/>
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Histórico de jogadas"
+        android:text="@string/historico_de_jogadas_realizadas"
         android:textColor="#1D2A44"
-        android:textStyle="bold"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Nenhuma jogada ainda."
+        android:text="@string/nenhuma_jogada_ainda"
         android:textColor="#888888"
         android:textSize="14sp"
         android:textStyle="italic" />

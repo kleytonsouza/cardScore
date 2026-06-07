@@ -5,17 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="32dp"
+    android:background="#F8F9FD"
     android:orientation="vertical"
     android:padding="24dp"
-    android:background="#F8F9FD"
     tools:context=".TrucoActivity">
 
-    <!-- BLOCO 1: PONTUAÇÃO MÁXIMA -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="PONTUAÇÃO MÁXIMA"
+        android:text="@string/pontua_o_maxima_maiuscula"
         android:textColor="#555555"
         android:textSize="12sp"
         android:textStyle="bold" />
@@ -23,23 +23,31 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginTop="4dp"
-        android:text="12 pts"
+        android:gravity="center"
+        android:text="@string/doze_pts"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <!-- BLOCO 2: PLACAR AZUL GRANDE -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="@string/truco"
+        android:textColor="#000000"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        app:cardBackgroundColor="#004694"
         app:cardCornerRadius="32dp"
-        app:cardElevation="0dp"
-        app:cardBackgroundColor="#004694">
+        app:cardElevation="0dp">
 
-        <!-- Divisor horizontal para separar Equipe 1 e Equipe 2 lado a lado -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,7 +55,6 @@
             android:paddingTop="20dp"
             android:paddingBottom="20dp">
 
-            <!-- Lado Esquerdo: Equipe 1 -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -58,7 +65,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EQUIPE 1"
+                    android:text="@string/equipe_1"
                     android:textColor="#A0C4FF"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -66,19 +73,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0"
+                    android:text="@string/valor_inicial"
                     android:textColor="#FFFFFF"
                     android:textSize="70sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <!-- Linha sutil separando as duas equipes -->
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:background="#20FFFFFF" />
 
-            <!-- Lado Direito: Equipe 2 -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -89,7 +94,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EQUIPE 2"
+                    android:text="@string/equipe_2"
                     android:textColor="#A0C4FF"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -97,7 +102,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0"
+                    android:text="@string/valor_inicial"
                     android:textColor="#FFFFFF"
                     android:textSize="70sp"
                     android:textStyle="bold" />
@@ -105,92 +110,101 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- BLOCO 3: BOTÕES DA EQUIPE 1 -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="+ pontos para Equipe 1"
+        android:text="@string/add_pontos_para_equipe_1"
         android:textColor="#666666"
         android:textSize="14sp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
-        <!-- Botão +1 -->
         <Button
+            style="?android:attr/absListViewStyle"
             android:layout_width="0dp"
             android:layout_height="54dp"
             android:layout_marginEnd="4dp"
+            android:maxLines="1"
+            android:padding="0dp"
             android:layout_weight="1"
-            android:text="+1"
-            android:textSize="12sp"
+            android:text="@string/add_1_equipe_1"
             android:textColor="#1D2A44"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:backgroundTint="#EEF2F8"
             app:cornerRadius="20dp" />
 
-        <!-- Botão +3 -->
         <Button
+            style="?android:attr/absListViewStyle"
             android:layout_width="0dp"
             android:layout_height="54dp"
+            android:maxLines="1"
+            android:padding="0dp"
             android:layout_marginEnd="4dp"
             android:layout_weight="1"
-            android:text="+3"
-            android:textSize="12sp"
+            android:text="@string/add_3_equipe_1"
             android:textColor="#1D2A44"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:backgroundTint="#EEF2F8"
             app:cornerRadius="20dp" />
 
-        <!-- Botão +6 -->
         <Button
+            style="?android:attr/absListViewStyle"
             android:layout_width="0dp"
             android:layout_height="54dp"
             android:layout_marginEnd="4dp"
+            android:maxLines="1"
+            android:padding="0dp"
             android:layout_weight="1"
-            android:text="+6"
-            android:textSize="12sp"
+            android:text="@string/add_6_equipe_1"
             android:textColor="#1D2A44"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:backgroundTint="#EEF2F8"
             app:cornerRadius="20dp" />
 
-        <!-- Botão +9 -->
         <Button
+            style="?android:attr/absListViewStyle"
             android:layout_width="0dp"
             android:layout_height="54dp"
             android:layout_marginEnd="4dp"
             android:layout_weight="1"
-            android:text="+9"
-            android:textSize="12sp"
+            android:maxLines="1"
+            android:padding="0dp"
+            android:text="@string/add_9_equipe_1"
             android:textColor="#1D2A44"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:backgroundTint="#EEF2F8"
             app:cornerRadius="20dp" />
 
-        <!-- Botão +12 -->
         <Button
+            style="?android:attr/absListViewStyle"
             android:layout_width="0dp"
             android:layout_height="54dp"
             android:layout_weight="1"
-            android:text="+12"
-            android:textSize="12sp"
+            android:maxLines="1"
+            android:padding="0dp"
+            android:text="@string/add_12_equipe_1"
             android:textColor="#1D2A44"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:backgroundTint="#EEF2F8"
             app:cornerRadius="20dp" />
     </LinearLayout>
 
-    <!-- BLOCO 4: BOTÕES DA EQUIPE 2 -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="+ pontos para Equipe 2"
+        android:text="@string/add_pontos_para_equipe_2"
         android:textColor="#666666"
         android:textSize="14sp" />
 
@@ -201,11 +215,14 @@
         android:orientation="horizontal">
 
         <Button
+            style="?android:attr/absListViewStyle"
             android:layout_width="0dp"
             android:layout_height="54dp"
             android:layout_marginEnd="4dp"
             android:layout_weight="1"
-            android:text="+1"
+            android:maxLines="1"
+            android:padding="0dp"
+            android:text="@string/add_1_equipe_2"
             android:textColor="#1D2A44"
             android:textSize="12sp"
             android:textStyle="bold"
@@ -213,68 +230,79 @@
             app:cornerRadius="20dp" />
 
         <Button
+            style="?android:attr/absListViewStyle"
             android:layout_width="0dp"
             android:layout_height="54dp"
-            android:layout_weight="1"
             android:layout_marginEnd="4dp"
-            android:text="+3"
-            android:textSize="12sp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:padding="0dp"
+            android:text="@string/add_3_equipe_2"
             android:textColor="#1D2A44"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:backgroundTint="#EEF2F8"
             app:cornerRadius="20dp" />
 
         <Button
+            style="?android:attr/absListViewStyle"
             android:layout_width="0dp"
             android:layout_height="54dp"
-            android:layout_weight="1"
             android:layout_marginEnd="4dp"
-            android:text="+6"
-            android:textSize="12sp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:padding="0dp"
+            android:text="@string/add_6_equipe_2"
             android:textColor="#1D2A44"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:backgroundTint="#EEF2F8"
             app:cornerRadius="20dp" />
 
         <Button
+            style="?android:attr/absListViewStyle"
             android:layout_width="0dp"
             android:layout_height="54dp"
-            android:layout_weight="1"
             android:layout_marginEnd="4dp"
-            android:text="+9"
-            android:textSize="12sp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:padding="0dp"
+            android:text="@string/add_9_equipe_2"
             android:textColor="#1D2A44"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:backgroundTint="#EEF2F8"
             app:cornerRadius="20dp" />
 
         <Button
+            style="?android:attr/absListViewStyle"
             android:layout_width="0dp"
             android:layout_height="54dp"
             android:layout_weight="1"
-            android:text="+12"
-            android:textSize="12sp"
+            android:text="@string/add_12_equipe_2"
             android:textColor="#1D2A44"
+            android:maxLines="1"
+            android:padding="0dp"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:backgroundTint="#EEF2F8"
             app:cornerRadius="20dp" />
     </LinearLayout>
 
-    <!-- BLOCO 5: HISTÓRICO DE JOGADAS -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Histórico de jogadas"
+        android:text="@string/historico_de_jogadas"
         android:textColor="#1D2A44"
-        android:textStyle="bold"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Nenhuma jogada ainda."
+        android:text="@string/nenhuma_jogada_ainda"
         android:textColor="#888888"
         android:textSize="14sp"
         android:textStyle="italic" />
